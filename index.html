@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <script>
+            const rps = ['Rock', 'Paper', 'Scissors'];
+
+            function computerPlay(){
+                let randomIndex = Math.floor(Math.random * 2);
+                return rps[randomIndex];
+            }
+
+            function playRound(playerSelection, computerSelection){
+                let playerIndex, computerIndex;
+                
+                for(i = 0; i < 3; i++){
+                    if(playerSelection.toUpperCase() === rps[i].toUpperCase){
+                        playerIndex = i;
+                        playerSelection = rps[i];
+                    }
+
+                    if(computerSelection === rps[i]){
+                        computerIndex = i;
+                    }
+                }
+
+                if(playerIndex - computerIndex === 1 || playerIndex - computerIndex === -2){
+                    return "You Win! " + playerSelection + " beats " + computerSelection + "!";
+                }
+                else if(computerIndex - playerIndex === 1 || computerIndex - playerIndex === -2){
+                    return "You Lose! " + computerSelection + " beats " + playerSelection + "!";
+                }
+                else{
+                    return "Draw!";
+                }
+            }
+
+            const ps = 'rOck';
+            const cs = computerPlay();
+            console.log(playRound(ps, cs));
+            
+        </script>
+    </body>
+</html>
