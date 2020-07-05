@@ -9,7 +9,7 @@
             const rps = ['Rock', 'Paper', 'Scissors'];
 
             function computerPlay(){
-                let randomIndex = Math.floor(Math.random * 2);
+                let randomIndex = Math.floor(Math.random() * 3);
                 return rps[randomIndex];
             }
 
@@ -17,7 +17,7 @@
                 let playerIndex, computerIndex;
                 
                 for(i = 0; i < 3; i++){
-                    if(playerSelection.toUpperCase() === rps[i].toUpperCase){
+                    if(playerSelection.toUpperCase() === rps[i].toUpperCase()){
                         playerIndex = i;
                         playerSelection = rps[i];
                     }
@@ -40,6 +40,7 @@
 
             const ps = 'rOck';
             const cs = computerPlay();
+            console.log("Computer : " + cs);
             console.log(playRound(ps, cs));
             
         </script>
