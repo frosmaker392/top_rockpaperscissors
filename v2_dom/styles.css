@@ -33,6 +33,7 @@ h3{
 .result-container{
     display: flex;
     align-content: center;
+    flex-direction: column;
 
     max-width: 410px;
     margin: 30px auto 20px auto;
@@ -44,17 +45,73 @@ h3{
     border-radius: 20px;
 }
 
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.rps-btn{
+    transition-property: all;
+    transition-duration: 0.1s;
+
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    margin: 0 5px 3px 5px;
+    padding: 0;
+
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.rps-btn:hover{
+    transform: translateY(0px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.rps-btn:active{
+    transform: translateY(3px);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.rps-btn#r{
+    background-color: #B08FB4;
+}
+.rps-btn#r:active{
+    background-color: #9b7d9e;
+}
+.rps-btn#p{
+    background-color: #B4B08F;
+}
+.rps-btn#p:active{
+    background-color: #969276;
+}
+.rps-btn#s{
+    background-color: #8FB4B0;
+}
+.rps-btn#s:active{
+    background-color: #759491;
+}
+
 .scores-container{
     display: flex;
     justify-content: space-between;
 
     margin: 0 auto 0 auto;
-    width: 180px;
+    width: 200px;
     padding: 15px;
 }
 
 .score-container{
-    width: 80px;
+    padding: 10px;
+    width: 70px;
+    background-color: rosybrown;
 }
 
 .score-label{
@@ -70,6 +127,7 @@ h3{
 
 #descr{
     font-size: 1rem;
+    font-style: italic;
     margin-top: 5px;
 }
 
@@ -83,6 +141,6 @@ h3{
 #s-label{
     font-weight: 700;
     font-size: 1.3rem;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 0;
 }
