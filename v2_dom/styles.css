@@ -3,6 +3,7 @@ html{
 }
 
 body{
+    font-family: 'Cabin', sans-serif;
     font-size: 14px;
     text-align: center;
     color: whitesmoke;
@@ -10,16 +11,47 @@ body{
 
 header{
     background-color: #8760C3;
-    
-    width: max-content;
+    max-width: max-content;
     margin: 25px auto 20px auto;
-    padding: 15px 30px 10px 30px;
+    padding: 5px 30px 5px 30px;
     border-radius: 20px;
 }
 
 h1{
-    color: #D2C0E7;
+    color: #e4ddec;
     font-family: 'Fredoka One', cursive;
-    font-size: 35px;
+    font-size: 2.3rem;
     letter-spacing: 1px;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
+.result-container{
+    display: flex;
+    align-content: center;
+
+    max-width: 410px;
+    margin: 30px auto 20px auto;
+    padding: 20px;
+    height: 120px;
+    background-color:#633350;
+
+    border: 3px solid rgb(68, 37, 55);
+    border-radius: 20px;
+}
+
+#descr{
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+#result{
+    box-sizing: content-box;
+    margin: auto;
+    white-space: pre-line;
+    font-size: 1.7rem;
 }
