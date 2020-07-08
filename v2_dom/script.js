@@ -3,6 +3,9 @@ const resultText = document.querySelector('#result');
 const roundCounter = document.querySelector('#round-counter');
 const rpsButtons = document.querySelectorAll(".rps-btn");
 
+const playerScoreText = document.querySelector('#st_p');
+const computerScoreText = document.querySelector('#st_c');
+
 let roundNumber = 1;
 let playerScore = 0;
 let computerScore = 0;
@@ -20,11 +23,24 @@ function standby(){
     }
 }
 
+//Triggers when any button is clicked, disables all buttons before next standby
 function onClick(){
-    const dataID = this.getAttribute("data-id");
-    console.log(dataID);
+    rpsButtons.forEach((button) => button.disabled = true);
 
-    playRound(dataID - 1, getComputerRandomIndex());
+    const playerIndex = this.getAttribute("data-id") - 1;
+    const computerIndex = getComputerRandomIndex();
+
+    const r = playRound(playerIndex, computerIndex);
+    parseWinLose(r, playerIndex, computerIndex);
+
+    roundNumber++;
+
+    if(playerScore < 5 && computerScore < 5){
+        setTimeout(standby, 2000);
+    }
+    else{
+        endGame();
+    }
 }
 
 //Returns a random index between 0 and 2;
@@ -57,20 +73,30 @@ function parseWinLose(roundResult, playerIndex, computerIndex){
     if(roundResult === 1){
         resultMsg = "You Win!\n" + playerMove + " beats " + computerMove;
         logMsg += " : Player wins";
+
+        playerScore++;
+        playerScoreText.textContent = playerScore;
     }
     else if(roundResult === -1){
         resultMsg = "You Lose!\n" + computerMove + " beats " + playerMove;
         logMsg += " : Computer wins";
+
+        computerScore++;
+        computerScoreText.textContent = computerScore;
     }
     else if(roundResult === 0){
         resultMsg = "Draw!";
         logMsg += " : Draw";
     }
     else{
-        resultMsg = "Something went wrong!\nRefresh the page"
+        resultMsg = "Something went wrong!\nTry refreshing the page";
     }
 
     logMsg += " ( " + playerMove + " | " + computerMove + " )";
 
     resultText.textContent = resultMsg;
+}
+
+function endGame(){
+
 }
