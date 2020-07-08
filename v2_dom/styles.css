@@ -53,6 +53,7 @@ footer{
     transition-property: all;
     transition-duration: 0.1s;
 
+    background-color: #B08FB4;
     transform: translateY(1px);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
     margin: 0 5px 3px 5px;
@@ -68,34 +69,17 @@ footer{
     color: rgba(0, 0, 0, 0.6);
 }
 
-.rps-btn:hover{
+.rps-btn:hover:enabled{
     transform: translateY(0px);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
 }
 
-.rps-btn:active{
+.rps-btn:active:enabled{
     transform: translateY(3px);
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-}
-
-.rps-btn#r{
-    background-color: #B08FB4;
-}
-.rps-btn#r:active{
     background-color: #9b7d9e;
 }
-.rps-btn#p{
-    background-color: #B4B08F;
-}
-.rps-btn#p:active{
-    background-color: #969276;
-}
-.rps-btn#s{
-    background-color: #8FB4B0;
-}
-.rps-btn#s:active{
-    background-color: #759491;
-}
+
 
 .scores-container{
     display: flex;

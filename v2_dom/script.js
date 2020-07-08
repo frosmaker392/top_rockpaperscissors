@@ -20,11 +20,14 @@ function standby(){
     if(roundNumber !== 1){
         resultText.textContent = "Computer is ready";
         roundCounter.textContent = "Round " + roundNumber;
+        rpsButtons.forEach((button) => button.disabled = false);
     }
 }
 
 //Triggers when any button is clicked, disables all buttons before next standby
 function onClick(){
+    rpsButtons.forEach((button) => button.disabled = true);
+
     const playerIndex = this.getAttribute("data-id") - 1;
     const computerIndex = getComputerRandomIndex();
 
