@@ -111,18 +111,20 @@ h3{
 .score-container{
     padding: 10px;
     width: 70px;
-    background-color: rosybrown;
+    background-color: #40657D;
+
+    border-radius: 10px;
 }
 
 .score-label{
-    margin-top: 0;
+    margin-top: 3px;
     margin-bottom: 5px;
 
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .score-text{
-    font-size: 2.2rem;
+    font-size: 2.3rem;
 }
 
 #descr{
