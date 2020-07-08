@@ -24,13 +24,6 @@ h1{
     letter-spacing: 1px;
 }
 
-h3{
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 15px;
-    margin-bottom: 0;
-}
-
 footer{
     margin-top: 50px;
 }
@@ -155,9 +148,10 @@ footer{
 }
 
 #descr{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-style: italic;
     margin-top: 5px;
+    margin-bottom: 30px;
 }
 
 #round-counter{
