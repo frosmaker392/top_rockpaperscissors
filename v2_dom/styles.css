@@ -37,7 +37,7 @@ h3{
     max-width: 410px;
     margin: 30px auto 20px auto;
     padding: 20px;
-    height: 120px;
+    min-height: 120px;
     background-color:#633350;
 
     border: 3px solid rgb(68, 37, 55);
