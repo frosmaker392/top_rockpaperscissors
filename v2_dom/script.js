@@ -2,6 +2,7 @@ const rps = ['Rock', 'Paper', 'Scissors'];
 const resultText = document.querySelector('#result');
 const roundCounter = document.querySelector('#round-counter');
 const rpsButtons = document.querySelectorAll(".rps-btn");
+const logContainer = document.querySelector(".log-container");
 
 const playerScoreText = document.querySelector('#st_p');
 const computerScoreText = document.querySelector('#st_c');
@@ -17,7 +18,6 @@ rpsButtons.forEach((button) => {
 //Puts the game state on standby, waiting for user input
 function standby(){
     if(roundNumber !== 1){
-        rpsButtons.forEach((button) => button.disabled = false);
         resultText.textContent = "Computer is ready";
         roundCounter.textContent = "Round " + roundNumber;
     }
@@ -25,8 +25,6 @@ function standby(){
 
 //Triggers when any button is clicked, disables all buttons before next standby
 function onClick(){
-    rpsButtons.forEach((button) => button.disabled = true);
-
     const playerIndex = this.getAttribute("data-id") - 1;
     const computerIndex = getComputerRandomIndex();
 
@@ -41,6 +39,14 @@ function onClick(){
     else{
         endGame();
     }
+}
+
+function addLogMessage(logMsg){
+    const newLog = document.createElement('p');
+    newLog.classList.add("log");
+    newLog.textContent = logMsg;
+
+    logContainer.appendChild(newLog);
 }
 
 //Returns a random index between 0 and 2;
@@ -94,6 +100,7 @@ function parseWinLose(roundResult, playerIndex, computerIndex){
 
     logMsg += " ( " + playerMove + " | " + computerMove + " )";
 
+    addLogMessage(logMsg);
     resultText.textContent = resultMsg;
 }
 
