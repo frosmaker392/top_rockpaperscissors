@@ -10,15 +10,15 @@ body{
 }
 
 header{
-    background-color: #8760C3;
+    background-color: #6C3C86;
     max-width: max-content;
-    margin: 25px auto 20px auto;
+    margin: 20px auto 10px auto;
     padding: 5px 30px 5px 30px;
     border-radius: 20px;
 }
 
 h1{
-    color: #e4ddec;
+    color: #d8aeee;
     font-family: 'Fredoka One', cursive;
     font-size: 2.3rem;
     letter-spacing: 1px;
@@ -27,6 +27,7 @@ h1{
 h3{
     font-weight: 700;
     font-size: 1.4rem;
+    margin-top: 15px;
     margin-bottom: 0;
 }
 
@@ -40,9 +41,9 @@ footer{
     flex-direction: column;
 
     max-width: 410px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
     padding: 20px;
-    min-height: 120px;
+    min-height: 110px;
     background-color:#364E3A;
 
     border: 3px solid #233125;
@@ -52,7 +53,7 @@ footer{
 .btn-container{
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .rps-btn{
@@ -160,7 +161,7 @@ footer{
 }
 
 #round-counter{
-    margin-top: 35px;
+    margin-top: 25px;
     margin-bottom: 10px;
 
     font-size: 1.3rem;
@@ -176,6 +177,6 @@ footer{
 #s-label{
     font-weight: 700;
     font-size: 1.3rem;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 0;
 }
