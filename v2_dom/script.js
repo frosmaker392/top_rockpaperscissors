@@ -40,7 +40,7 @@ function onClick(){
         setTimeout(standby, 2000);
     }
     else{
-        endGame();
+        setTimeout(endGame, 2000);
     }
 }
 
@@ -108,5 +108,12 @@ function parseWinLose(roundResult, playerIndex, computerIndex){
 }
 
 function endGame(){
-
+    if(playerScore > computerScore){
+        resultText.textContent = "Congratulations!\nYou won the game!";
+        addLogMessage("Game end, Player wins - Final Score : " + playerScore + " | " + computerScore);
+    }
+    else{
+        resultText.textContent = "You lost the game!\nBetter luck next time!";
+        addLogMessage("Game end, Computer wins - Final Score : " + playerScore + " | " + computerScore);
+    }
 }
