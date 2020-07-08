@@ -30,18 +30,22 @@ h3{
     margin-bottom: 0;
 }
 
+footer{
+    margin-top: 50px;
+}
+
 .result-container{
     display: flex;
     align-content: center;
     flex-direction: column;
 
     max-width: 410px;
-    margin: 30px auto 20px auto;
+    margin: 0 auto 20px auto;
     padding: 20px;
     min-height: 120px;
-    background-color:#633350;
+    background-color:#364E3A;
 
-    border: 3px solid rgb(68, 37, 55);
+    border: 3px solid #233125;
     border-radius: 20px;
 }
 
@@ -127,10 +131,39 @@ h3{
     font-size: 2.3rem;
 }
 
+.log-scroll-container{
+    overflow: auto;
+    margin: 20px auto 0 auto;
+
+    background-color: #404269;
+    border-radius: 10px;
+    height: 200px;
+    max-width: 350px;
+}
+
+.log-container{
+    display: flex;
+    flex-direction: column;
+    padding: 13px 15px;
+
+    text-align: left;
+}
+
+.log{
+    margin: 3px 0;
+}
+
 #descr{
     font-size: 1rem;
     font-style: italic;
     margin-top: 5px;
+}
+
+#round-counter{
+    margin-top: 35px;
+    margin-bottom: 10px;
+
+    font-size: 1.3rem;
 }
 
 #result{
